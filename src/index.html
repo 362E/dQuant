@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="/css/theme.css" type="text/css"> </head>
+<body>
+  <nav style="height:170px;" class="navbar navbar-expand-md bg-secondary navbar-dark">
+    <div class="container" id="particles-js">
+      <a class="navbar-brand" href="#">
+        <h1>dQUANT<br> <span style="font-size:26px !important;">Decentralized Structured Financial Derivatives Protocol</span></h1>&nbsp;</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"> </div>
+    </div>
+  </nav>
+  <div class="bg-secondary">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a href="" class="active nav-link" data-toggle="tab" data-target="#tabone">Collateralize Underlying Securities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" data-toggle="tab" data-target="#tabtwo">Deal Window</a>
+            </li>
+          </ul>
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <div class="card-body col-5">
+                <form class="">
+                  <div class="form-group">
+                    <label id="collateralizeBondLabel" class="text-left">Collateralize Bond</label>
+                    <input type="" id="collateralizeBondInput" class="form-control" placeholder="8"> </div>
+                    <button type="submit" id="collateralizeBond" class="btn btn-primary">Send Funds</button>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="form-group">
+                    <label id="collateralizeDerivativeLabel">Collateralize Derivative</label>
+                    <input type="" id="collateralizeDerivativeInput" class="form-control" placeholder="6"> </div>
+                    <button type="submit" id="collateralizeDerivative" class="btn btn-primary">Send Funds</button>
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+              <div class="">
+                <div class="container py-5">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-header font-weight-bold">
+                          <h1> Issuer</h1>
+                          <h1> </h1>
+                        </div>
+                        <div class="card-body">
+                          <form class="form-horizontal">
+                            <div class="text-center font-weight-bold"> Package Securities </div>
+                            <div class="form-group">
+                              <label>Bond Token</label>
+                              <input type="" id="bondTokenAddr" class="form-control" placeholder="0xEE5Ac828a8a7424033B1EFe49f126DA95ee18466"> </div>
+                            <div class="form-group">
+                              <label>Derivative Token</label>
+                              <input type="" id="derivativeTokenAddr" class="form-control" placeholder="0xB358332a1e9C9A8Bc372669351ceBAa3F9A93528"> </div>
+                            <div class="form-group">
+                              <label>Index Token</label>
+                              <input type="" id="indexTokenAddr" class="form-control" placeholder="0x3C7209eA8f4C66c0d4FEE1EC6B7A599ABd5C25A6"> </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                <input type="" id="dspPrice" class="form-control" placeholder="10"> </div>
+                            <div class="form-group">
+                                    <label>Commission</label>
+                                    <input type="" id="dspCommission" class="form-control" placeholder="10"> </div>
+                            <button type="submit" id="issueDspBtn" class="btn btn-primary">Issue</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-header font-weight-bold">
+                          <h1> Rating Agencies</h1>
+                        </div>
+                        <div class="card-body">
+                          <form class="">
+                            <div class="form-group">
+                              <label class="text-left">Rating</label>
+                              <input id="ratingInput" type="" class="form-control" placeholder="8">
+                            </div>
+                            <button type="submit" id="ratingSubmitBtn" class="btn btn-primary">Submit Rating</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card">
+                        <div class="card-header font-weight-bold">
+                          <h1> Investor</h1>
+                        </div>
+                        <div class="card-body">
+                          <form class="">
+                            <div class="form-group">
+                              <label class="text-left">Metadata:</label>
+                              <label class="text-left" id="metaDataHolder"></label>
+                            </div>
+                            <div class="form-group">
+                              <label class="text-left">Price:</label>
+                              <label class="text-left" id="priceHolder"></label>
+                            </div>
+                            <div class="form-group">
+                              <label class="text-left">Commission(%):</label>
+                              <label class="text-left" id="commissionHolder"></label>
+                            </div>
+                            <div class="form-group">
+                              <label class="text-left">UnderlyingSecurities:</label>
+                              <label class="text-left" id="underlyingSecuritiesHolder" style="display:none;width: 315px;">
+                                  <u>Bond: 0x345ca3e014aaf5dca488057592ee47305d9b3e10</u><br><br>
+                                  <u>Derivative: 0xf25186b5081ff5ce73482ad761db0eb0d25abfbf</u><br><br>
+                                  <u>Index: 0x8f0483125fcb9aaaefa9209d8e9d7b9c8b9fb90f</u>
+                              </label>
+                            </div>
+                            <div class="form-group">
+                              <label class="text-left">Rating:</label>
+                              <label class="text-left" id="ratingHolder"></label>
+                            </div>
+                            <div class="form-group">
+                              <label class="text-left" id="ratingAgencyHolder">Rating Agencies:</label>
+                            </div>
+                            <div class="form-group">
+                              <label class="text-left">Issuer:</label>
+                              <label class="text-left"  style="width: 315px;" id="issuerHolder"></label>
+                            </div>
+                            <button type="submit" id="buyDSPBtn" class="btn btn-primary">Buy</button>
+                            <button type="submit" id="claimPayoutBtn" class="btn btn-primary">Claim Payout</button>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                              <label class="text-left">Sell</label>
+                              <input type="" id="sellToAddrInput" class="form-control" placeholder="0x"> </div>
+                            <button type="submit" id="sellDSPBtn" class="btn btn-primary">Sell</button>
+                            <div class="form-group"></div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <script type="text/javascript" src="js/particles.js"></script>
+  <script type="text/javascript">
+   particlesJS("particles-js",{
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+  });
+  </script>
+<style>
+
+.bg-secondary {
+    background-color: #434d69 !important;
+}
+</style>
+
+</body>
+
+</html>
